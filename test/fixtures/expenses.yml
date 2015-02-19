@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ex_cat_id: 1
+  value: 9.99
+
+two:
+  ex_cat_id: 1
+  value: 9.99

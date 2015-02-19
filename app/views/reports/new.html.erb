@@ -1,0 +1,25 @@
+<h1>Report Search</h1>
+ 
+<%= form_for @report do |f| %>
+
+  <div class="field">
+    <%= f.label :expense_category_id %><br />
+    <%= f.collection_select(:expense_category_id, @expense_categories, :id, :name, :include_blank => true ) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :income_category_id %><br />
+    <%= f.collection_select(:income_category_id, @income_categories, :id, :name, :include_blank => true ) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :date_from, "Date Period" %><br />
+    <p> from <%= f.date_select :date_from %> -
+     to <%= f.date_select :date_to %></p>
+  </div>
+
+
+ 
+  <div class="actions"><%= f.submit "Search" %></div>
+  
+<% end %>
